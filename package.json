@@ -1,0 +1,29 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "test": "nyc mocha --require ts-node/register test/*.ts"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "dependencies": {
+    "@types/node": "^10.0.7",
+    "chai": "^4.1.2",
+    "types": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.3",
+    "@types/mocha": "^5.2.0",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.3",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  },
+  "private": true
+}
