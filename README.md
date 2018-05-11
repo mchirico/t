@@ -11,5 +11,8 @@ This is for testing...
 git clone git@github.com:mchirico/t.git
 cd t
 npm install
+
+# To checkout no Firebase
+git checkout tags/noFirebase -b working
 ```
 
