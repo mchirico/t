@@ -1,5 +1,9 @@
+[![Build Status](https://travis-ci.com/mchirico/t.svg?branch=develop)](https://travis-ci.com/mchirico/t)
+
 ## t
 This is for testing...
+
+
 
 
 ## Getting Started
