@@ -1,10 +1,11 @@
 const z = 2
-export function test0(a) {
+export const test0 = function (a) {
     return a + 12 + z
 }
 
+
 export function once(fn) {
-    let returnValue, called = false;
+    var returnValue, called = false;
     return function () {
         if (!called) {
             called = true;
@@ -25,3 +26,4 @@ export class Greeter {
         return "Hello, " + this.greeting;
     }
 }
+

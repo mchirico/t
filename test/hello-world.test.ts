@@ -6,7 +6,7 @@ describe('MyFunctions', () => {
     let myFunctions;
 
     before(() => {
-        myFunctions = require('../src/index.ts');
+        myFunctions = require('../src/hello-world.ts');
     });
     after(() => {
 
