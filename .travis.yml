@@ -15,9 +15,11 @@ cache:
 install:
 - npm i npm@latest -g
 - npm install
+- ./install.sh
 script:
 - export CHROME_BIN=chromium-browser
 - npm run test
+- cd functions && npm run test
 notifications:
   email:
     recipients:
@@ -25,8 +27,8 @@ notifications:
     on_success: never
     on_failure: always
 before_install:
-#- openssl aes-256-cbc -k "$super_secret_password"
-#  -in service-account.json.enc -out service-account.json -d
+- openssl aes-256-cbc -k "$super_secret_password"
+  -in service-account.json.enc -out functions/test/service-account.json -d
 
 - echo 'test'
 before_script:
