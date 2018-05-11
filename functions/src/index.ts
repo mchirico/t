@@ -4,6 +4,13 @@ const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 const db = admin.firestore();
 
+
+class Train {
+
+}
+
+
+
 exports.groupA = {
 
 
@@ -34,6 +41,7 @@ exports.groupA = {
                     //     doc.data().Population)
 
                     response.status(200).send(JSON.stringify(doc.data()))
+                    //response.status(200).send(doc.data())
 
                     console.log('doc.data().Population: ', doc.data().Population)
                     console.log('Document data:', doc.data());
