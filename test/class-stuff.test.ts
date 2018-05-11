@@ -21,10 +21,11 @@ describe('Class Stuff', () => {
 
 
  
-    it('tests class', function () {
+    it('tests if message', function () {
 
-        let g = new myFunctions.Greeter("msg")
+        let g = new myFunctions.MsgBot("msg")
         console.log(g.greet())
+        console.log(g.getDate())
         expect(g.greet()).is.equal('Hello, msg')
 
     });
