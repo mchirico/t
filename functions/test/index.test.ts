@@ -1,8 +1,6 @@
 import {expect} from 'chai';
 //const sinon = require('sinon');
 
-
-
 const admin = require('firebase-admin');
 
 // At the top of test/index.test.js
@@ -15,18 +13,12 @@ const test = require('firebase-functions-test')({
 
 const functions = require('firebase-functions');
 
-
 describe('Cloud Functions', () => {
     let myFunctions;
 
-
-
     before(() => {
 
-
         myFunctions = require('../src/index.ts');
-
-
 
         const docRef2 = admin.firestore().collection('users').doc('stuff');
         docRef2.set({
@@ -47,9 +39,8 @@ describe('Cloud Functions', () => {
         it('should have Access-Control-Allow', (done) => {
             // A fake request object, with req.query.text set to 'input'
             const req = {query: {text: 'input'}};
+
             // A fake response object, with a stubbed redirect function which does some assertions
-
-
             class Res {
                 event: string;
 
@@ -82,7 +73,7 @@ describe('Cloud Functions', () => {
                 set(headerKey, headerValue) {
                     expect(headerKey).to.be.oneOf(['Access-Control-Allow-Origin',
                         'Access-Control-Allow-Methods'])
-                    expect(headerValue).oneOf(['*','GET, POST'])
+                    expect(headerValue).oneOf(['*', 'GET, POST'])
                 }
             }
 
@@ -90,9 +81,6 @@ describe('Cloud Functions', () => {
             myFunctions.groupA.function1(req, res);
         });
     });
-
-
-
 
 
 });
