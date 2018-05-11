@@ -1,12 +1,24 @@
 import moment = require("moment-timezone");
 
+
+class Person {
+    firename:string;
+    lastname:string;
+    age:number;
+}
+
+
+
 class Bot {
     name: string;
     date: Date;
+    dict: Map<string, Person>;
+
 
     constructor(theName: string) {
         this.name = theName;
-        this.date = new Date()
+        this.date = new Date();
+        this.dict = new Map<string, Person>();
     }
 
     move(distanceInMeters: number = 0) {
@@ -22,7 +34,7 @@ export class MsgBot extends Bot {
         this.greeting = name;
     }
 
-    getDate(){
+    getDate() {
         const localDate = moment(this.date);
         return localDate.tz('America/New_York').format('YYYY-mm-DD:HH:MM:SS z');
 
