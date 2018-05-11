@@ -1,5 +1,5 @@
-import {expect} from 'chai';
-
+import {expect,assert} from 'chai';
+const sinon = require('sinon');
 
 describe('Cloud Functions', () => {
     let myFunctions;
@@ -15,4 +15,21 @@ describe('Cloud Functions', () => {
         console.log(`value was ${ans}`)
         done();
     });
+
+
+    it('calls the original function', function () {
+        const callback = sinon.fake();
+        const proxy = myFunctions.once(callback);
+
+        proxy();
+
+        console.log(callback.called)
+        expect(callback.called).is.true;
+
+        // 2nd way
+        assert(callback.called)
+
+    });
+
+
 });
