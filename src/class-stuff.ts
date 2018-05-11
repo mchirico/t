@@ -2,7 +2,7 @@ import moment = require("moment-timezone");
 
 
 class Person {
-    firename:string;
+    firstname:string;
     lastname:string;
     age:number;
 }
