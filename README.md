@@ -1,11 +1,11 @@
 [![Build Status](https://travis-ci.com/mchirico/t.svg?branch=develop)](https://travis-ci.com/mchirico/t)
 [![Maintainability](https://api.codeclimate.com/v1/badges/80dc8d161d5a42a453a9/maintainability)](https://codeclimate.com/github/mchirico/t/maintainability)
 ## t
-This is for testing...
+This is a Playground for (t)esting.
 
 ## StackBlitz
 
-[Angular0](https://stackblitz.com/github/mchirico/t/tree/angular0)
+[StackBlitz Angular0](https://stackblitz.com/github/mchirico/t/tree/angular0)
 
 
 ## Getting Started
