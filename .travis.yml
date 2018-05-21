@@ -2,8 +2,9 @@ dist: trusty
 sudo: false
 language: node_js
 node_js:
-- '8.10'
+- '9'
 addons:
+  chrome: stable
   apt:
     sources:
     - google-chrome
@@ -13,26 +14,30 @@ cache:
   directories:
   - "./node_modules"
 install:
-- npm i npm@latest -g
 - npm install
-- ./install.sh
+- npm install -g @angular/cli
+
 script:
 - export CHROME_BIN=chromium-browser
-- npm run test
-- cd functions && npm run test
+- xvfb-run -a npm run test -- --browsers=ChromeNoSandbox --code-coverage --watch=false
+- xvfb-run -a npm run e2e -- 
 notifications:
   email:
     recipients:
     - "$EMAIL_NOTIFICATION$"
     on_success: never
     on_failure: always
+    
 before_install:
-- openssl aes-256-cbc -k "$super_secret_password"
-  -in service-account.json.enc -out functions/test/service-account.json -d
+#- openssl aes-256-cbc -K $encrypted_42dfc908ad7d_key -iv $encrypted_42dfc908ad7d_iv
+#  -in src_environments.tar.gz.enc -out src_environments.tar.gz -d
+#- tar xzf src_environments.tar.gz
 
-- echo 'test'
 before_script:
 - npm install -g codecov
 - npm install coveralls
+- ng lint
+
 after_success:
-- codecov
+  - codecov
+
