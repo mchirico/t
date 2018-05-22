@@ -1,5 +1,11 @@
 [![Build Status](https://travis-ci.com/mchirico/t.svg?branch=develop)](https://travis-ci.com/mchirico/t)
 [![Maintainability](https://api.codeclimate.com/v1/badges/80dc8d161d5a42a453a9/maintainability)](https://codeclimate.com/github/mchirico/t/maintainability)
+
+<a href='https://jira.aipiggybot.io/projects/TT/issues/TT-16?filter=allopenissues'>
+<img src="https://storage.googleapis.com/montco-stats/JiraSoftware.png" alt="drawing" width="150px;"/>
+         </a>
+         
+         
 ## t
 This is a Playground for (t)esting.  The angular0 branch is used for stackBlitz examples. 
 
