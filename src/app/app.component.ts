@@ -1,30 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 
-import {DataService} from '../data/data.service';
-
-class TextObject {
-    text: string;
-    count: number;
-}
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    title = 'app';
-    textObject = new TextObject();
-
-    constructor(private dataService: DataService) {
-    }
+    title = 't';
+    text0 = '';
+    count = 0;
 
     ngOnInit() {
-        this.dataService.logChange('Init');
-        this.dataService.buildObservable(this.textObject);
     }
 
-    nextItem() {
-        this.dataService.buildObservable(this.textObject);
+    button0() {
+        this.text0 = 'click: ' + (this.count++).toString();
     }
 }
