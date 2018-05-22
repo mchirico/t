@@ -16,7 +16,6 @@ which I use to build new projects on Github.  It has the necessary .travis file.
 
 wget https://github.com/mchirico/t/archive/blitz0.zip
 unzip blitz0.zip
-# 
 
 cd t-blitz0
 
@@ -30,8 +29,6 @@ ng test
 
 # Run basic page (ctl-c to end)
 ng s -o
-
-
 
 ```
 
