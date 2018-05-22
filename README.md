@@ -37,6 +37,8 @@ git commit -m "first commit"
 git remote add origin git@github.com:mchirico/sproject.git
 git push -u origin master
 
+# Show results
+git remote show origin
 
 ```
 
