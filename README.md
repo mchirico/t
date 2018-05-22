@@ -7,7 +7,34 @@
          
          
 ## t
-This is a Playground for (t)esting.  The angular0 branch is used for stackBlitz examples. 
+This is a Playground for (t)esting.  Below are very basic steps
+[StackBlitz Bootstrap](https://stackblitz.com/github/mchirico/t/tree/blitz0) example,
+which I use to build new projects on Github.  It has the necessary .travis file.
+
+```bash
+
+
+wget https://github.com/mchirico/t/archive/blitz0.zip
+unzip blitz0.zip
+# 
+
+cd t-blitz0
+
+npm install
+# or
+yarn install
+yarn upgrade
+
+# Run tests (ctl-c to end)
+ng test
+
+# Run basic page (ctl-c to end)
+ng s -o
+
+
+
+```
+
 
 
 ### [StackBlitz Angular0](https://stackblitz.com/github/mchirico/t/tree/ang0)
