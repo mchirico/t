@@ -35,11 +35,17 @@ export class DataService {
     buildObservable(textObject) {
         const myObservable = Observable.create((observer: Observer<string>) => {
             setTimeout(() => {
-                observer.next('first package');
+                observer.next(this.getMsg());
             }, 2000);
             setTimeout(() => {
-                observer.next('2nd package');
+                observer.next(this.getMsg());
+            }, 3000);
+            setTimeout(() => {
+                observer.next(this.getMsg());
             }, 4000);
+            setTimeout(() => {
+                observer.next(this.getMsg());
+            }, 5000);
             setTimeout(() => {
                 observer.complete();
             }, 6000);
