@@ -30,6 +30,14 @@ ng test
 # Run basic page (ctl-c to end)
 ng s -o
 
+# Example of push to remote repo sproject.git
+git init
+
+git commit -m "first commit"
+git remote add origin git@github.com:mchirico/sproject.git
+git push -u origin master
+
+
 ```
 
 
