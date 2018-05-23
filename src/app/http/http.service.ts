@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpResponse, HttpErrorResponse} from '@angular/common/http';
 
-import {TextObject} from '../util/textObjects';
+import {TextObject} from '../util/utils';
 import {Observable, throwError} from 'rxjs';
 
-import {TextForDataService} from '../util/textObjects';
+import {TextForDataService} from '../util/utils';
 
 
 export interface ResponseData {

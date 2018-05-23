@@ -1,0 +1,16 @@
+<p><input
+        (keyup)="searchTerm$.next($event.target.value)">
+</p>
+
+<ul *ngIf="results">
+    <li *ngFor="let r of results.results">
+        <a href="{{ r.latest }}" target="_blank">
+            {{ r.name }}
+        </a>
+    </li>
+</ul>
+
+
+<div *ngFor="let r of result">
+    {{r.id}}: {{r.name}}
+</div>
