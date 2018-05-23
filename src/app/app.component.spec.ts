@@ -5,13 +5,16 @@ import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 
 
+import {HttpClientModule} from '@angular/common/http';
+
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
-        imports: [FormsModule, BrowserModule],
+        imports: [FormsModule, BrowserModule, HttpClientModule],
     }).compileComponents();
   }));
   it('should create the app', async(() => {
