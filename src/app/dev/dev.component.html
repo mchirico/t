@@ -1,0 +1,40 @@
+<div style="text-align:center">
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
+
+</div>
+
+<button type="button" class="btn btn-primary"
+tooltip="t project (github.com/mchirico/t)"
+(click)="button0()">
+    Playground Angular
+</button> <br><br>
+<button type="button" class="btn btn-primary"
+tooltip="button1"
+(click)="button1()">
+    Data Service
+</button> &nbsp;&nbsp;&nbsp;
+<button type="button" class="btn btn-primary"
+tooltip="Working with pipe, will unsubscribe after 10s"
+(click)="buttonPipe()">
+    Data Service
+</button>
+
+
+
+<p><input type="text" [(ngModel)]="text0"></p>
+<p><input type="text" [(ngModel)]="textForDataService.text"></p>
+<p><input type="text" [(ngModel)]="textObject.text"></p>
+<p><input type="text" [(ngModel)]="textObs"></p>
+
+
+    <br><br>
+        <p>
+            References:
+<a href="https://jira.aipiggybot.io/browse/TT-12">TT-12</a>
+<br>
+<a href="https://mchirico.github.io/t/">mchirico.github.io/t</a>
+<br>
+<a href="https://angular.io/guide/http">angular.io/guide/http</a>
+    </p>
