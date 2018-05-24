@@ -1,12 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {FormsModule} from '@angular/forms';
-
-
 import {AppComponent} from './app.component';
-
 import {TooltipModule} from 'ngx-bootstrap/tooltip';
+
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +13,7 @@ import {TooltipModule} from 'ngx-bootstrap/tooltip';
   ],
   imports: [
     BrowserModule, TooltipModule.forRoot(),
-      FormsModule,
+      FormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
