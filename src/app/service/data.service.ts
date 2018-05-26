@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {TextObject, TextForDataService} from '../util/textObjects';
+import {TextObject, TextForDataService} from '../util/utils';
 import {HttpService} from '../http/http.service';
 
 

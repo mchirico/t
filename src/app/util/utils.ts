@@ -11,3 +11,12 @@ export class TextForDataService {
         this.count++;
     }
 }
+
+export interface Results {
+    name: string;
+    latest: string;
+}
+
+export interface Result {
+    results: Results[];
+}
