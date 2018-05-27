@@ -14,8 +14,9 @@ cache:
   directories:
   - "./node_modules"
 install:
-- npm install
-- npm install -g @angular/cli
+#- npm install
+#- npm install -g @angular/cli
+- yarn
 
 script:
 - export CHROME_BIN=chromium-browser
