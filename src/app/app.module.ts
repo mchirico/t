@@ -10,11 +10,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {SimpleHttpService} from './http/simple.http.service';
 import { AppRoutingModule } from './app-routing.module';
 import { ChartExampleComponent } from './chart-example/chart-example.component';
+import { Ds3ExampleComponent } from './ds3-example/ds3-example.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, SearchComponent, DevComponent, ChartExampleComponent
+    AppComponent, SearchComponent, DevComponent, ChartExampleComponent, Ds3ExampleComponent
   ],
   imports: [
     BrowserModule, TooltipModule.forRoot(),
