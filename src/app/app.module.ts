@@ -9,11 +9,12 @@ import {TooltipModule} from 'ngx-bootstrap/tooltip';
 import {HttpClientModule} from '@angular/common/http';
 import {SimpleHttpService} from './http/simple.http.service';
 import { AppRoutingModule } from './app-routing.module';
+import { ChartExampleComponent } from './chart-example/chart-example.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, SearchComponent, DevComponent
+    AppComponent, SearchComponent, DevComponent, ChartExampleComponent
   ],
   imports: [
     BrowserModule, TooltipModule.forRoot(),
