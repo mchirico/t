@@ -11,6 +11,7 @@ import * as d3 from 'd3';
 export class Ds3ExampleComponent implements OnInit {
 
     radius = 30;
+    count = 1;
 
     constructor() {
     }
@@ -26,6 +27,15 @@ export class Ds3ExampleComponent implements OnInit {
             .attr('r', () => {
                 return this.radius;
             })
-            .attr('fill', 'red');
+            .attr('fill', 'white')
+            .attr('stroke', 'black');
+
+        d3.select(event.target).append('text')
+            .attr('dx', event.offsetX)
+            .attr('dy', event.offsetY + 5)
+            .attr('fill', 'black')
+            .attr('text-anchor', 'middle')
+            .text(`${this.count++}`);
+
     }
 }
