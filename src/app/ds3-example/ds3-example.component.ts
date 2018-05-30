@@ -40,8 +40,8 @@ export class Ds3ExampleComponent implements OnInit {
         d3.select(event.target).append('path')
             .attr('id', 'wavy') // Unique id of the path
             .attr('d', `M ${event.offsetX}, ${event.offsetY} Q 100,15 200,70 Q 340,140 400,30`) // SVG path
-            .style('fill', 'none')
-            .style('stroke', '#AAAAAA');
+            .style('stroke', '#A00AAA')
+            .attr('fill', 'none');
 
 
     }
