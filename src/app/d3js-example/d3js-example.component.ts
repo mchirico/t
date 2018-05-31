@@ -5,10 +5,10 @@ import * as d3 from 'd3';
 
 @Component({
     selector: 'app-ds3-example',
-    templateUrl: './ds3-example.component.html',
-    styleUrls: ['./ds3-example.component.scss']
+    templateUrl: './d3js-example.component.html',
+    styleUrls: ['./d3js-example.component.scss']
 })
-export class Ds3ExampleComponent implements OnInit {
+export class D3jsExampleComponent implements OnInit {
 
     radius = 30;
     count = 1;

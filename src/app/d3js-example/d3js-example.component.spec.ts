@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Ds3ExampleComponent } from './ds3-example.component';
+import { D3jsExampleComponent } from './d3js-example.component';
 
-describe('Ds3ExampleComponent', () => {
-  let component: Ds3ExampleComponent;
-  let fixture: ComponentFixture<Ds3ExampleComponent>;
+describe('D3jsExampleComponent', () => {
+  let component: D3jsExampleComponent;
+  let fixture: ComponentFixture<D3jsExampleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Ds3ExampleComponent ]
+      declarations: [ D3jsExampleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Ds3ExampleComponent);
+    fixture = TestBed.createComponent(D3jsExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
