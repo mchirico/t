@@ -33,6 +33,6 @@ describe('DevComponent', () => {
         const fixture = TestBed.createComponent(DevComponent);
         fixture.detectChanges();
         const compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('h1').textContent).toContain('Welcome to t!');
+        expect(compiled.querySelector('h1').textContent).toContain('t');
     }));
 });
