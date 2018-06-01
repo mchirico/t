@@ -15,7 +15,8 @@ import { D3jsExampleComponent } from './d3js-example/d3js-example.component';
 
 @NgModule({
   declarations: [
-    AppComponent, SearchComponent, DevComponent, ChartExampleComponent, D3jsExampleComponent
+    AppComponent, SearchComponent, DevComponent,
+      ChartExampleComponent, D3jsExampleComponent
   ],
   imports: [
     BrowserModule, TooltipModule.forRoot(),
