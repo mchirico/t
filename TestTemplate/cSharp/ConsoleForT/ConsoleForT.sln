@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleForT", "ConsoleForT\ConsoleForT.csproj", "{133311DD-309F-4052-BFC9-C3608FE8253C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleForT", "TestConsoleForT\TestConsoleForT.csproj", "{520049E1-2072-41D6-BAE1-417EE6F042F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{133311DD-309F-4052-BFC9-C3608FE8253C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{133311DD-309F-4052-BFC9-C3608FE8253C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{133311DD-309F-4052-BFC9-C3608FE8253C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{133311DD-309F-4052-BFC9-C3608FE8253C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{520049E1-2072-41D6-BAE1-417EE6F042F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520049E1-2072-41D6-BAE1-417EE6F042F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520049E1-2072-41D6-BAE1-417EE6F042F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520049E1-2072-41D6-BAE1-417EE6F042F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

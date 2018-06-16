@@ -1,44 +1,46 @@
 dist: trusty
 sudo: false
-language: node_js
-node_js:
-- '9'
-addons:
-  chrome: stable
-  apt:
-    sources:
-    - google-chrome
-    packages:
-    - google-chrome-stable
-cache:
-  directories:
-  - "./node_modules"
-install:
-#- npm install
-#- npm install -g @angular/cli
-- yarn
+matrix:
+  include:
+  - language: csharp
+    mono: none
+    dotnet: 2.1
+    before_script:
+    - cd TestTemplate/cSharp/ConsoleForT/
+    script:
+    - dotnet test TestConsoleForT
 
-script:
-- export CHROME_BIN=chromium-browser
-- xvfb-run -a npm run test -- --browsers=ChromeNoSandbox --code-coverage --watch=false
-- xvfb-run -a npm run e2e -- 
-notifications:
-  email:
-    recipients:
-    - "$EMAIL_NOTIFICATION$"
-    on_success: never
-    on_failure: always
-    
-before_install:
-#- openssl aes-256-cbc -K $encrypted_42dfc908ad7d_key -iv $encrypted_42dfc908ad7d_iv
-#  -in src_environments.tar.gz.enc -out src_environments.tar.gz -d
-#- tar xzf src_environments.tar.gz
+  - language: node_js
+    node_js:
+    - '9'
+    chche:
+      directories:
+      - "./node_modules"
+    addons:
+      chrome: stable
+      apt:
+        sources:
+        - google-chrome
+        packages:
+        - google-chrome-stable
+    before_script:
+    - npm install -g codecov
+    - npm install coveralls
+    - yarn
+    - ng lint
+    email:
+      recipients:
+      - "$EMAIL_NOTIFICATION$"
+      on_success: never
+      on_failure: always
+    script:
+    - export CHROME_BIN=chromium-browser
+    - xvfb-run -a npm run test -- --browsers=ChromeNoSandbox --code-coverage --watch=false
+    - xvfb-run -a npm run e2e --
+    after_success:
+    - codecov
 
-before_script:
-- npm install -g codecov
-- npm install coveralls
-- ng lint
 
-after_success:
-  - codecov
+
+
 
